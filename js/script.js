@@ -14,12 +14,28 @@ async function loadJson(filePath) {
 document.addEventListener("DOMContentLoaded", function () {
     const filePath = "../projects.json";
     loadJson(filePath).then(data => {
-        const projects = document.getElementById("projects");
-        for (key in data) {
+        const projects = document.getElementById("projects_container");
+        for (let key in data) {
             const title = key;
             const description = data[key].description;
             const img = data[key].img;
-            let html = "";
+            const links = data[key].docs;
+            let html = "<div class='projects-cards'>";
+            html += "<div class='projects-cards-img'>";
+            html += "<img src='" + img + "' alt='Project Image'>";
+            html += "</div>";
+            html += "<br>";
+            html += "<div class='projects-cards-title'>" + title + "</div>";
+            html += "<br>";
+            html += "<div class='projects-cards-description'>" + description + "</div>";
+            html += "<br>";
+            html += "<div class='projects-cards-docs'>";
+            for (let doc in links) {
+                html += "<a href='" + links[doc] + "' target='_blank'>" + doc + "</a>";
+            }
+            html += "</div>";
+            html += "</div>";
+            projects.innerHTML += html;
         }
     });
 });

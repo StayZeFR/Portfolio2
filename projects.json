@@ -1,9 +1,46 @@
 {
-    "KSAV" : {
-        "description" : "",
-        "img" : "...",
+    "KSAV_Admin" : {
+        "description" : "Application lourde en JAVA de gestion des utilisateurs.",
+        "img" : "assets/ksav_admin.png",
         "docs" : {
-            "Documentation technique" : "..."
+            "Documentation technique" : "/docs/ksav_admin.pdf",
+            "Code source" : "https://github.com/StayZeFR/KSAV_Admin"
+        }
+    },
+    "KSAV" : {
+        "description" : "Application web permettant la gestion des avis client.",
+        "img" : "assets/ksav.png",
+        "docs" : {
+            "Documentation technique" : "/docs/ksav.pdf",
+            "Code source" : "https://github.com/StayZeFR/KSAV"
+        }
+    },
+    "Vision des commandes sur une carte" : {
+        "description": "Fonctionnalité permettant de visualiser les commandes clients sur une carte.",
+        "img": "assets/pap.png",
+        "docs": {
+            "Documentation technique": "/docs/GGW-78.pdf"
+        }
+    },
+    "Planning des réceptions à venir" : {
+        "description": "Fonctionnalité permettant de visualiser les réceptions fournisseurs sur un planning.",
+        "img": "assets/pap.png",
+        "docs": {
+            "Documentation technique": "/docs/TAF-1095.pdf"
+        }
+    },
+    "GLPI" : {
+        "description": "Gestion d'un parc informatique avec GLPI.",
+        "img": "assets/glpi.png",
+        "docs": {
+            "Documentation": "/docs/GLPI.pdf"
+        }
+    },
+    "Filou" : {
+        "description": "Site internet permettant la visualisation des produits.",
+        "img": "assets/filou.png",
+        "docs": {
+            "Documentation": "/docs/filou.pdf"
         }
     }
 }
