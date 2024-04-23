@@ -4,10 +4,11 @@ body, html {
     font-family: Arial, sans-serif;
     height: 100%;
     width: 100%;
+    background-color: #f5f5f5;
 }
 
 nav {
-    background: linear-gradient(177.9deg, rgb(58, 62, 88) 3.6%, rgb(119, 127, 148) 105.8%);
+    background-color: #22427c;
     color: white;
     padding: 10px;
     text-align: center;
@@ -104,28 +105,69 @@ nav > .profile > .profile-picture {
     padding: 30px;
 }
 
-.container > #profile > .resume > .profile-picture_container {
-    width: 250px;
-    min-width: 250px;
-    height: 250px;
-    min-height: 250px;
-    background-color: red;
-}
-
-.container > #profile > .resume > .profile-picture_container > .profile-picture {
-    border-radius: 50%;
-    background-image: url("../assets/profile.jpg");
-    background-position: center;
-}
-
-.container > #profile > .resume {
+.container > #profile > .content {
     padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.container > #profile > .content > .resume {
     display: flex;
     flex-direction: row;
     gap: 100px;
 }
 
-.container > #profile > .resume:last-child {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+.container > #profile > .content > .resume > .profile-picture_container {
+    width: 250px;
+    min-width: 250px;
+    height: 250px;
+    min-height: 250px;
+}
+
+.container > #profile > .content > .resume > .profile-picture_container > .profile-picture {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/profile.jpg");
+    background-position: center;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skills-cards {
+    width: 120px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 170px 10px 20px;
+    grid-template-columns: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 5px;
+}
+
+.skills-cards > .skills-cards-img {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    border-bottom: 1px solid gray;
+    position: relative;
+}
+
+.skills-cards > .skills-cards-img > img {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.skills-cards > .skills-cards-title {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    text-align: center;
 }
