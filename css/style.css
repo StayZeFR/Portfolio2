@@ -99,3 +99,33 @@ nav > .profile > .profile-picture {
     font-size: 1.5em;
     margin-top: 20px;
 }
+
+.container > #profile {
+    padding: 30px;
+}
+
+.container > #profile > .resume > .profile-picture_container {
+    width: 250px;
+    min-width: 250px;
+    height: 250px;
+    min-height: 250px;
+    background-color: red;
+}
+
+.container > #profile > .resume > .profile-picture_container > .profile-picture {
+    border-radius: 50%;
+    background-image: url("../assets/profile.jpg");
+    background-position: center;
+}
+
+.container > #profile > .resume {
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.container > #profile > .resume:last-child {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
