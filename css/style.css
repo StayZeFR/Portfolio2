@@ -133,6 +133,29 @@ nav > .profile > .profile-picture {
     background-position: center;
 }
 
+.container > #profile > .content > .resume > .profile-info {
+    position: relative;
+}
+
+.container > #profile > .content > .resume > .profile-info > a {
+    color: #22427c;
+    text-decoration: none;
+    border: 2px solid #22427c;
+    padding: 7px 50px;
+    text-align: center;
+    font-weight: bold;
+    transition: ease-in-out 0.3s;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+.container > #profile > .content > .resume > .profile-info > a:hover {
+    background-color: #22427c;
+    color: white;
+}
+
 .skills {
     display: flex;
     flex-direction: row;
