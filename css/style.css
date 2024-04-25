@@ -145,10 +145,6 @@ nav > .profile > .profile-picture {
     text-align: center;
     font-weight: bold;
     transition: ease-in-out 0.3s;
-    position: absolute;
-    left: 50%;
-    bottom: 30px;
-    transform: translateX(-50%);
 }
 
 .container > #profile > .content > .resume > .profile-info > a:hover {
@@ -310,4 +306,48 @@ nav > .profile > .profile-picture {
 .projects-cards > .projects-cards-docs > a:hover {
     background-color: #22427c;
     color: white;
+}
+
+#rss_container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rss-cards {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.rss-cards > .rss-cards-title {
+    font-weight: bold;
+
+}
+
+.rss-cards > .rss-cards-description {
+    text-align: justify;
+    font-style: italic;
+}
+
+.rss-cards > .rss-cards-date {
+    text-align: right;
+    font-style: italic;
+}
+
+.rss-cards > .rss-cards-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.rss-cards > .rss-cards-link > a {
+    color: #22427c;
+    text-decoration: none;
+    border: 1px solid #22427c;
+    padding: 5px 15px;
 }
