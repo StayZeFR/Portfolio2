@@ -24,20 +24,25 @@ function parseRssFeed(xml) {
       articles.push(article);
     }
     return articles;
-  }
+}
 
 function getRssFeed(url) {
     let data;
     $.ajax({
-        url: url,
-        dataType: "xml",
+        url: "FeedRss.php",
+        method: "POST",
+        dataType: "json",
+        data: {
+            url: JSON.stringify(url)
+        },
         async: false,
-        success: function (xml) {
-            data = parseRssFeed(xml);
+        success: function (result) {
+            data = result;
         }
     });
     return data;
 }
+
 
 function convertDate(dateString) {
     const date = new Date(dateString);
@@ -90,29 +95,33 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    const rssFeed = {
-        "phppot" : getRssFeed("https://phppot.com/feed/")
-    };
+    const rssFeed = [
+        "https://phppot.com/feed/",
+        "https://blog.jetbrains.com/phpstorm/feed/",
+    ];
+
+    const result = getRssFeed(rssFeed);
 
     const rssContainer = document.getElementById("rss_container");
-    for (let key in rssFeed) {
-        let html = "<h4 class='rss-cards-title'>" + key + "</h4>";
-        const articles = rssFeed[key];
+    result.forEach(element => {
+        let html = "<h4 class='rss-cards-title'>" + element.title + "</h4>";
+        const articles = element.items;
         for (let i = 0; i < articles.length; i++) {
             const article = articles[i];
             const date = convertDate(article.date.toString().substring(0, 24));
             html += "<div class='rss-cards'>";
-            html += "<div class='rss-cards-title'>" + article.titre + "</div>";
+            html += "<div class='rss-cards-title'>" + article.title + "</div>";
             html += "<br>";
             html += "<div class='rss-cards-description'>" + article.description + "</div>";
             html += "<br>";
             html += "<div class='rss-cards-date'>" + date["date"] + " " + date["hours"] + "</div>";
             html += "<br>";
             html += "<div class='rss-cards-link'>";
-            html += "<a href='" + article.lien + "' target='_blank'>Lire l'article</a>";
+            html += "<a href='" + article.link + "' target='_blank'>Lire l'article</a>";
             html += "</div>";
             html += "</div>";
         }
         rssContainer.innerHTML += html;
-    }
+    });
+
 });
