@@ -19,14 +19,16 @@
         "description": "Fonctionnalité permettant de visualiser les commandes clients sur une carte.",
         "img": "assets/pap.png",
         "docs": {
-            "Documentation technique": "/docs/GGW-78.pdf"
+            "Documentation technique": "/docs/GGW-78.pdf",
+            "Documentation utlisateur": "/docs/GGW-78_UTILISATEUR.pdf"
         }
     },
     "Planning des réceptions à venir" : {
         "description": "Fonctionnalité permettant de visualiser les réceptions fournisseurs sur un planning.",
         "img": "assets/pap.png",
         "docs": {
-            "Documentation technique": "/docs/TAF-1095.pdf"
+            "Documentation technique": "/docs/TAF-1095.pdf",
+            "Documentation utlisateur": "/docs/TAF-1095_UTILISATEUR.pdf"
         }
     },
     "GLPI" : {
