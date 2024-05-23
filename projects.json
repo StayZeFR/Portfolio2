@@ -31,6 +31,15 @@
             "Documentation utlisateur": "/docs/TAF-1095_UTILISATEUR.pdf"
         }
     },
+    "Consultation des fichiers PriceIQ" : {
+        "description": "Fonctionnalité permettant de consulter les données venant de PriceIQ.",
+        "img": "assets/pap.png",
+        "docs": {
+            "Documentation technique": "/docs/PRI-95.pdf",
+            "Documentation utlisateur": "/docs/PRI-95_UTILISATEUR.pdf",
+            "Recette": "/docs/PRI-95_RECETTE.pdf"
+        }
+    },
     "GLPI" : {
         "description": "Gestion d'un parc informatique avec GLPI.",
         "img": "assets/glpi.png",
