@@ -86,7 +86,7 @@ function pad(number, length) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const filePath = "../projects.json";
+    /*const filePath = "../projects.json";
     loadJson(filePath).then(data => {
         const projects = document.getElementById("projects_container");
         for (let key in data) {
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
             html += "</div>";
             projects.innerHTML += html;
         }
-    });
+    });*/
 
     const rssFeed = [
         "https://phppot.com/feed/",
